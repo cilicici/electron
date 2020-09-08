@@ -18,7 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "build": "electron-builder build --mac --win --publish never",
-    "deploy": "electron-builder build --mac --win --publish always"
+    "deploy": "electron-builder build --mac --win --publish always",
+    "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder --mac --win --publish always"
   },
   "author": "",
   "license": "ISC",
