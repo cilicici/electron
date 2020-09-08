@@ -19,7 +19,9 @@
     "start": "electron .",
     "build": "electron-builder build --mac --win --publish never",
     "deploy": "electron-builder build --mac --win --publish always",
-    "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder --mac --win --publish always"
+    "release-win": "electron-builder -w --publish always",
+    "release-mac": "electron-builder -m --publish always",
+    "release-lin": "electron-builder -l --publish always"
   },
   "author": "",
   "license": "ISC",

@@ -38,8 +38,9 @@ jobs:
           npm install
           
       - name: npm release
+        if: matrix.os == 'windows-latest'
         run: |
-          npm release
+          npm run release
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
