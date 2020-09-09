@@ -59,9 +59,18 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Cleanup artifacts
+      - name: Cleanup artifacts windows
+        if: matrix.os == 'windows-latest'
         run: |
-          npx rimraf "dist/!(*.exe|*.deb|*.AppImage|*.dmg)"
+          npx rimraf "dist/!(*.exe)"
+      - name: Cleanup artifacts macOS
+        if: matrix.os == 'macOS-latest'
+        run: |
+          npx rimraf "dist/!(*.dmg)"
+      - name: Cleanup artifacts ubuntu
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          npx rimraf "dist/!(*.deb|*.AppImage)"
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
