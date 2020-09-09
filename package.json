@@ -3,6 +3,10 @@
   "version": "1.0.1",
   "description": "",
   "main": "main.js",
+  "author": {
+    "name": "Ivan",
+    "email": "ivan@ivan.ivan"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cilicici/electron.git"
@@ -27,7 +31,6 @@
     "release-mac": "electron-builder -m -p never ",
     "release-lin": "electron-builder -l -p never"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^10.1.1",
