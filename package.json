@@ -1,5 +1,5 @@
 {
-  "name": "electron-auto-update-example",
+  "name": "electron-cilicicicicic",
   "version": "1.0.1",
   "description": "",
   "main": "main.js",
@@ -8,6 +8,15 @@
     "url": "https://github.com/cilicici/electron.git"
   },
   "build": {
+    "appId": "rs.cilicicicicic",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
     "publish": [{
       "provider": "github",
       "owner": "cilicici",
