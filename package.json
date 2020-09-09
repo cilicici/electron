@@ -13,7 +13,10 @@
       "provider": "github",
       "owner": "cilicici",
       "repo": "electron"
-    }]
+    }],
+    "linux": {
+      "target": ["AppImage", "deb"]
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
