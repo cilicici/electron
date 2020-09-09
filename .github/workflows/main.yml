@@ -60,6 +60,11 @@ jobs:
         if: matrix.os == 'macOS-latest'
         run: |
           npm run release-mac
+        env:
+          CSC_LINK: ${{ secrets.MAC_CERTS }}
+          CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTS_PASSWORD }}
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: npm release ubuntu
         if: matrix.os == 'ubuntu-latest'
         run: |
