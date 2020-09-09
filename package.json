@@ -21,7 +21,7 @@
     "deploy": "electron-builder build --mac --win --publish always",
     "release-win": "electron-builder -w  ",
     "release-mac": "electron-builder -m  ",
-    "release-lin": "electron-builder -l "
+    "release-lin": "electron-builder -l -p never"
   },
   "author": "",
   "license": "ISC",
