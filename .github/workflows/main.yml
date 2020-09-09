@@ -34,9 +34,13 @@ jobs:
           middle_name2: ${{ toJson(secrets.MAC_CERTS_PASSWORD) }}
           Last_Name: Octocat
           CSC_LINK: ${{ secrets.MAC_CERTS }}
+          CSC_IDENTITY_AUTO_DISCOVERY: false
           CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTS_PASSWORD }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: echo Hello world $FIRST_NAME "$middle_name" "$middle_name2" $Last_Name!
+     
+      - name: Context
+        run: echo "$Last_Name" $Last_Name
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
