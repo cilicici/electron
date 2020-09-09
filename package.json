@@ -28,8 +28,8 @@
     "start": "electron .",
     "build": "electron-builder build --mac --win --publish never",
     "deploy": "electron-builder build --mac --win --publish always",
-    "release-win": "electron-builder -w  ",
-    "release-mac": "electron-builder -m  ",
+    "release-win": "electron-builder -w -p never ",
+    "release-mac": "electron-builder -m -p never ",
     "release-lin": "electron-builder -l -p never"
   },
   "author": "",
