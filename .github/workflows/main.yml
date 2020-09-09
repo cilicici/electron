@@ -30,7 +30,7 @@ jobs:
       - name: Context
         env:
           FIRST_NAME: Cili
-          middle_name: ${{ secrets.windows_certs_password }}
+          middle_name: ${{ secrets.MAC_CERTS_PASSWORD }}
           Last_Name: Octocat
         run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
